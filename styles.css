@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+header nav h1 {
+    color: orange;
+    font-size: 35px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    padding-left: 40px;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 25px;
+    
+ }
+
+ header nav ul li a{
+   color: black;
+    
+ }
+
+
+header nav ul li:last-child {
+    margin-right: 65px;
+ }
+
+  
+h1.ignored {
+    color: orange;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding: 15px;
+    margin-left: 95px;
+  }
+
+  h1.ignored a {
+    color: orange;
+  }
+
+.crave-intro {
+    font-size: 29px;
+    margin-top:155px;
+    margin-left: 115px;
+    display: inline-block;
+    
+}
+
+
+.crave-intro-img {
+    height: 405px;
+    width: 405px;
+    float: right;
+    margin-right: 65px;
+    margin-top: 50px;
+}
+
+section h2 .crave-em {
+    color: orange;
+    font-size: 60px;
+}
+
+.section-about {
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 281px;
+    width: 57%;
+    padding: 4px;
+
+}
+
+.section-about p {
+    padding: 9px;
+}
+
+.pricing-section {
+    background-color: orange;
+    color: white;
+    text-align: center;
+    margin-top: 65px;
+    margin-left: 281px;
+    width: 57%;
+    padding: 45px;
+    border: 4px solid orange;
+    border-radius: 22px;
+}
+
+.pricing-section h1 {
+    
+    font-size: 55px;
+}
+
+.pricing-section .clap-gif {
+    transform: scale(1.4);
+}
+
+.section-about h1 {
+    font-size: 48px;
+    color: orange;
+}
+
+
+.recipes-section {
+    color: black;
+    text-align: center;
+    margin-top: 109px;
+    margin-left: 281px;
+    width: 57%;
+    padding: 45px;
+    border: 3px solid black;
+    border-radius: 22px;
+}
+
+.recipes-section h1{
+    font-size: 40px;
+
+}
+
+.recipes-section{
+    font-family: 'Hind', sans-serif;
+   
+}
+
+.recipes-section p {
+    padding: 20px;
+    font-size: 18px;
+}
+
+.arrow-img {
+    margin-left: 397px;
+    height: 220px;
+    width: 550px;
+    align-items: center;
+}
+
+.recipes-ing-section {
+    color: black;
+    text-align: center;
+    margin-left: 281px;
+    width: 57%;
+    padding: 45px;
+    border: 3px solid black;
+    border-radius: 22px;
+}
+
+.recipes-ing-section ul {
+    padding-top: 25px;
+    list-style: none;
+}
+
+.recipes-ing-section li {
+    padding-top: 10px;
+}
+
+.recipes-ing-section h1{
+    font-size: 40px;
+
+}
+
+.recipes-ins-section {
+    color: black;
+    text-align: center;
+    margin-left: 281px;
+    width: 57%;
+    padding: 45px;
+    border: 3px solid black;
+    border-radius: 22px;
+}
+
+.recipes-ins-section h1{
+    font-size: 40px;
+
+}
+
+.recipes-ins-section ul {
+    padding-top: 55px;
+    list-style: none;
+}
+
+.recipes-ins-section p {
+    padding-top: 35px;
+    color: orange
+}
+
+.recipes-ins-section li {
+    padding-top: 10px;
+}
+
+.recipes-pasta-img {
+    height: 400px;
+    width: 635px;
+    border-radius: 22px;
+    border: 3px solid black;
+    margin-left: 327px;
+    
+}
+.pasta-img-section {
+    padding-bottom: 50px;
+}
+footer {
+    background-color: white;
+    color: black;
+    height: 70px;
+}
+
+footer p {
+    padding: 9px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.create-recipes-section {
+    color: black;
+    text-align: center;
+    margin-left: 281px;
+    width: 57%;
+    padding: 45px;
+    border: 3px solid black;
+    border-radius: 22px;
+}
+
+div.recipes-container {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    margin-left: 511px;
+    text-align: center;
+    width: 20%;
+    color: white;
+    background-color: orange;
+    border: 2px solid orange;
+    padding: 11px;
+    
+}
+
+div.recipes-container a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+
+.create-recipe-section {
+    text-align: center;
+}
+
+#recipe-form {
+    margin-top: 30px;
+}
+
+
+
+label {
+    display: block;
+}
+
+.recipe-form-section input {
+    color: black;
+    text-align: center;
+    margin-left: 281px;
+    width: 57%;
+    padding: 45px;
+    border: 3px solid black;
+    border-radius: 22px;
+
+}
+
+textarea {
+    white-space: pre;
+    width: 100%;
+    height: 100px;
+    resize: none;
+    color: black;
+    text-align: center;
+    margin-left: 281px;
+    width: 57%;
+    padding: 45px;
+    border: 3px solid black;
+    border-radius: 22px;
+    height: 260px;
+}
+
+#title, #ingredients, #instructions {
+    font-size: 20px;
+  
+}
+
+#save-recipe-btn {
+    font-size: 16px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    cursor: pointer;
+    
+}
+
+.save-recipe-btn-div {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.recipe-item {
+    white-space: pre;
+    padding: 45px;
+    text-align: center;
+}
+
+
+#recipe-list {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 20px;
+    height: 100vh;
+}
+
+.delete-btn {
+    margin-left: 555px;
+    display: flex;
+    margin-top: 40px; 
+    font-size: 16px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: white;
+    color: orange;
+    transform: 0.9s ease-in;
+}
+
+.under-construction {
+    margin-top: 210px;
+    text-align: center;
+}
+
+.under-construction p {
+    font-size: 30px;
+}
+
+.construction-img {
+    width: 90px;
+    height: 90px;
+}
+
+
+
