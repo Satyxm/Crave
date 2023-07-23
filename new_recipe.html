@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/pizza-svgrepo-com.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500&family=Poppins:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Create Your Own Recipes | Crave</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <h1 class="ignored"><a href="./index.html">Crave</a></h1>
+          <li><a href="./About.html">About</a></li>
+          <li><a href="./recipes.html">Recipes</a></li>
+          <li><a href="./pricing.html">Pricing</a></li>
+          <li><a href="./account.html" >Account</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="recipe-form-section">
+    <div id="recipe-form">
+      <label for="title" ></label>
+      <input type="text" id="title" placeholder="Enter the Name of your Recipe" required>
+      <img class="arrow-img" src="./assets/Arrow.png" />
+      <label for="ingredients"></label>
+      <textarea id="ingredients" placeholder="Enter the Ingredients" required></textarea>
+      <img class="arrow-img" src="./assets/Arrow.png" />      
+      <label for="instructions"></label>
+      <textarea id="instructions" placeholder="Enter the Instructions" required></textarea>
+      
+      
+    </div>
+    <div class="save-recipe-btn-div">
+    <button id="save-recipe-btn" onclick="saveRecipe()">Save Your Recipe</button>
+  </div>
+    <div id="recipe-list">
+      <h3>Your Recipes: </h3>
+      <ul id="recipes">
+      </ul>
+    </div>
+  </section>
+    <script src="./script.js"></script>
+</body>
+</html>
