@@ -221,6 +221,10 @@ footer p {
     text-align: center;
 }
 
+footer p a {
+    color: black;
+}
+
 .create-recipes-section {
     color: black;
     text-align: center;
