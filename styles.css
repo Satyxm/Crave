@@ -124,7 +124,7 @@ section h2 .crave-em {
 }
 
 .recipes-section h1{
-    font-size: 40px;
+    font-size: 30px;
 
 }
 
@@ -461,3 +461,80 @@ textarea {
 font-size: 25px;
 transition: 1.3s ease-in;
 }
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+  }
+  
+
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .registration-form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .registration-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: orange;
+  }
+  
+  .reg-btn {
+    margin-top: 35px;
+    border: none;
+    background-color: orange;
+    font-size: large;
+    padding: 14px;
+    border-radius: 14px; 
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    cursor: pointer;
+  }
+
+  .reg-btn a {
+    color: white;
+  }
