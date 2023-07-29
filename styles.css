@@ -210,7 +210,7 @@ section h2 .crave-em {
     padding-bottom: 50px;
 }
 footer {
-    background-color: white;
+    background-color: inherit;
     color: black;
     height: 70px;
 }
