@@ -6,6 +6,8 @@
     text-decoration: none;
 }
 
+
+
 header nav h1 {
     color: orange;
     font-size: 35px;
@@ -462,12 +464,6 @@ font-size: 25px;
 transition: 1.3s ease-in;
 }
 
-body {
-    font-family: 'Poppins', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f3f3f3;
-  }
   
 
   .container {
@@ -538,3 +534,36 @@ body {
   .reg-btn a {
     color: white;
   }
+
+  .new-reg-btn {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  
+
+  .login-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .login-form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+
+ 
+
+  
+
+

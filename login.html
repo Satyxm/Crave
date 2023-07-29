@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
-  <title>Registration | Crave</title>
+  <title>Login | Crave</title>
 </head>
 <body>
     <header>
@@ -24,22 +24,19 @@
             </ul>
         </nav>
       </header>
-      <div class="container">
-        <form id="registrationForm" class="registration-form">
-          <h2>User Registration</h2>
+    <div class="login-container">
+        <form id="loginForm" class="login-form">
+          <h2>User Login</h2>
           <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required placeholder="Michael_Scott">
+            <label for="loginUsername">Username</label>
+            <input type="text" id="loginUsername" name="username" required placeholder="Michael_Scott">
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="michaelscott@dundermifflin.org">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" name="password" required>
           </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required placeholder="Enter Password">
-          </div>
-          <button type="submit">Register</button>
+          <button type="submit">Login</button>
+          <p class="new-reg-btn">Don't have an account? <a href="./registration.html">Register</a></p>
         </form>
       </div>
       <script src="script.js"></script>
