@@ -335,12 +335,12 @@ textarea {
 }
 
 .delete-btn {
-    margin-left: 555px;
+    margin-left: 290px;
     display: flex;
     margin-top: 40px; 
     font-size: 16px;
-    background-color: orange;
-    color: white;
+    background-color: white;
+    color: orange;
     border: none;
     border-radius: 5px;
     padding: 7px;
@@ -348,8 +348,8 @@ textarea {
 }
 
 .delete-btn:hover {
-    background-color: white;
-    color: orange;
+    background-color: orange;
+    color: white;
     transform: 0.9s ease-in;
 }
 
@@ -560,10 +560,33 @@ transition: 1.3s ease-in;
     margin-bottom: 20px;
     color: #333;
   }
+
+  .recipe-form-section #recipe-list {
+    word-wrap: break-word; 
+
+  }
+
+  .recipe-form-section #recipe-list #recipes {
+    margin-top: 40px;
+  }
+
+  .recipe-form-section #recipe-list #recipes li {
+    margin: 10px auto; 
+  max-width: 80%;
+    background-color: orange;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    margin-left: 281px;
+    width: 57%;
+    padding: 45px;
+    border-radius: 22px;
+    list-style: none;
+    word-wrap: break-word; /* Add this line to make text wrap within each box */
+  }
   
-
- 
-
-  
-
-
+  .recipe-form-section #recipe-list #recipes li:hover {
+    transition: 0.5s ease-in;
+    background-color: white;
+    color: black;
+  }
