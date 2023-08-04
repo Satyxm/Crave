@@ -590,3 +590,12 @@ transition: 1.3s ease-in;
     background-color: white;
     color: black;
   }
+
+  .section-about {
+    margin-top: 30px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 22px;
+    padding: 45px;
+    margin-bottom: 30px;
+  }
