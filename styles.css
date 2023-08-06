@@ -599,3 +599,18 @@ transition: 1.3s ease-in;
     padding: 45px;
     margin-bottom: 30px;
   }
+
+  .section-about:hover {
+    background-color: orange;
+    color: white;
+    transition: 0.5s ease-in;
+  }
+  
+  .section-about:hover h1,
+  .section-about:hover * {
+    color: white;
+    transition: 0.5s ease-in;
+  }
+  
+
+
