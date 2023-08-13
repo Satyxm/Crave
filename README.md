@@ -1,6 +1,5 @@
-# Welcome to Crave: Embark on Your Culinary Adventure 🍳
+# Welcome to Crave: Embark on Your Culinary Adventure 🌱
 ![Crave logo](https://github.com/Satyxm/Crave/assets/97077594/9d4a54aa-e00b-425b-a37c-476bcc55b5cf)
-
 
 Are you a dedicated food explorer, constantly on the lookout for new flavors and culinary delights? Your search ends here! Crave is your ultimate haven, offering a tantalizing journey into a realm of delectable recipes, inventive concoctions, and gastronomic marvels.
 
@@ -35,9 +34,6 @@ Stay connected, stay engaged, and stay excited for the upcoming enhancements on 
 [Visit Crave](https://crave-beige.vercel.app/)
 
 Signing off,
-
 Satyam Singh
 
 **Please note that the provided information is based on the current state of development and may be subject to adjustments as I refine and enhance the enhancement.**
-
-
