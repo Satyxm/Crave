@@ -142,7 +142,8 @@ async function displayRecipes() {
 
 
 // registration
-const baseURL = "http://localhost:3000"; 
+const baseURL = "http://localhost:10000";
+; 
 
 const registrationForm = document.getElementById("registrationForm");
 registrationForm.addEventListener("submit", registerUser);
