@@ -27,7 +27,6 @@ While our passion lies in sharing exceptional recipes, we're equally dedicated t
 In the meantime, indulge in the thoughtfully designed user interface, explore recipes galore, and envision the culinary marvels that await you.
 
 ## Reach Out and Savor the Experience ☎️
-Questions, feedback, or suggestions? We're all ears! Get in touch with our dedicated support team at support@crave.com.
 
 Thank you for choosing Crave to embark on your culinary escapade. Stay tuned for updates, and may your cooking endeavors be filled with joy!
 
