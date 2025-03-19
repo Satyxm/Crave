@@ -1,44 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./assets/pizza-svgrepo-com.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
-  <title>Login | Crave</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign In - Crave</title>
 </head>
 <body>
     <header>
         <nav>
-            
-            <ul>
-                <h1 class="ignored"><a href="./index.html">Crave</a></h1>
-                <li><a href="./About.html">About</a></li>
-                <li><a href="./recipes.html">Recipes</a></li>
-                <li><a href="./pricing.html" >Pricing</a></li>
-                <li><a href="./account.html" >Account</a></li>
-                <li><a href="./login.html" >Sign In</a></li>
+            <div class="logo">
+                <a href="./index.html"><i class="fas fa-utensils"></i> Crave</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="./recipes.html"><i class="fas fa-book-open"></i> Recipes</a></li>
+                <li><a href="./pricing.html"><i class="fas fa-tags"></i> Pricing</a></li>
+                <li><a href="./about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="./account.html"><i class="fas fa-user"></i> Account</a></li>
             </ul>
+            <button class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
         </nav>
-      </header>
-    <div class="login-container">
-        <form id="loginForm" class="login-form">
-          <h2>User Login</h2>
-          <div class="form-group">
-            <label for="loginUsername">Username</label>
-            <input type="text" id="loginUsername" name="username" required placeholder="Michael_Scott">
-          </div>
-          <div class="form-group">
-            <label for="loginPassword">Password</label>
-            <input type="password" id="loginPassword" name="password" required>
-          </div>
-          <button type="submit">Login</button>
-          <p class="new-reg-btn">Don't have an account? <a href="./registration.html">Register</a></p>
-        </form>
-      </div>
-      <script src="script.js"></script>
+    </header>
+
+    <section class="login-hero">
+        <div class="login-container">
+            <div class="login-content">
+                <h1>Welcome Back</h1>
+                <p class="login-subtitle">Sign in to continue your culinary journey</p>
+                
+                <form class="login-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" name="password" required placeholder="Enter your password">
+                            <button type="button" class="toggle-password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" name="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-sign-in-alt"></i> Sign In
+                    </button>
+
+                    <div class="social-login">
+                        <p>Or continue with</p>
+                        <div class="social-buttons">
+                            <button type="button" class="btn btn-social btn-google">
+                                <i class="fab fa-google"></i> Google
+                            </button>
+                            <button type="button" class="btn btn-social btn-facebook">
+                                <i class="fab fa-facebook-f"></i> Facebook
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="register-link">
+                        <p>Don't have an account? <a href="#">Sign up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Crave. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

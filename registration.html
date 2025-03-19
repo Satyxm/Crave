@@ -3,45 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./assets/pizza-svgrepo-com.svg">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3081/3081559.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="./styles.css">
-  <title>Registration | Crave</title>
+  <title>Register - Crave</title>
 </head>
 <body>
     <header>
         <nav>
-            
+            <h1 class="ignored"><a href="./index.html"><i class="fas fa-utensils"></i> Crave</a></h1>
             <ul>
-                <h1 class="ignored"><a href="./index.html">Crave</a></h1>
-                <li><a href="./About.html">About</a></li>
-                <li><a href="./recipes.html">Recipes</a></li>
-                <li><a href="./pricing.html" >Pricing</a></li>
-                <li><a href="./account.html" >Account</a></li>
-                <li><a href="./login.html" >Sign In</a></li>
+                <li><a href="./About.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="./recipes.html"><i class="fas fa-book-open"></i> Recipes</a></li>
+                <li><a href="./pricing.html"><i class="fas fa-tags"></i> Pricing</a></li>
+                <li><a href="./account.html"><i class="fas fa-user"></i> Account</a></li>
+                <li><a href="./login.html"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+                <li class="theme-toggle-container">
+                    <button class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
             </ul>
         </nav>
-      </header>
-      <div class="container">
+    </header>
+    <div class="container">
         <form id="registrationForm" class="registration-form">
-          <h2>User Registration</h2>
-          <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required placeholder="Michael_Scott">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="michaelscott@dundermifflin.org">
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required placeholder="Enter Password">
-          </div>
-          <button type="submit">Register</button>
+            <h2>User Registration</h2>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Michael_Scott">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="michaelscott@dundermifflin.org">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter Password">
+            </div>
+            <button type="submit">Register</button>
         </form>
-      </div>
-      <script src="script.js"></script>
+    </div>
+    <footer>
+        <p>&copy; 2024 Crave. All rights reserved.</p>
+    </footer>
+    <script src="./script.js"></script>
 </body>
 </html>

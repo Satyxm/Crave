@@ -3,83 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/pizza-svgrepo-com.svg" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500&family=Poppins:wght@400;500;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Recipes | Crave</title>
+    <title>Recipes - Crave</title>
   </head>
   <body>
     <header>
       <nav>
-        <ul>
-          <h1 class="ignored"><a href="./index.html">Crave</a></h1>
-          <li><a href="./About.html">About</a></li>
-          <li><a href="./recipes.html">Recipes</a></li>
-          <li><a href="./pricing.html">Pricing</a></li>
-          <li><a href="./account.html" >Account</a></li>
-          <li><a href="./login.html" >Sign In</a></li>
+        <div class="logo">
+          <a href="./index.html"><i class="fas fa-utensils"></i> Crave</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="./recipes.html" class="active"><i class="fas fa-book-open"></i> Recipes</a></li>
+          <li><a href="./pricing.html"><i class="fas fa-tags"></i> Pricing</a></li>
+          <li><a href="./about.html"><i class="fas fa-info-circle"></i> About</a></li>
+          <li class="auth-links">
+            <a href="./login.html" class="login-link"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            <a href="./signup.html" class="signup-link"><i class="fas fa-user-plus"></i> Sign Up</a>
+            <a href="./account.html" class="account-link hidden"><i class="fas fa-user"></i> Account</a>
+          </li>
         </ul>
+        <button class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
       </nav>
     </header>
 
-    <div class="recipes-container">
-      <span><a href="./new_recipe.html">Create Your Own Recipe </a></span>
-    </div>
+    <main>
+      <section class="recipes-hero">
+        <div class="recipes-hero-content">
+          <h1>Discover Delicious Recipes</h1>
+          <p class="recipes-subtitle">Explore our collection of mouthwatering dishes</p>
+        </div>
+      </section>
 
-    <section class="recipes-section">
-      <h1>Pasta 🍝</h1>
-      <p>Let's Learn how to make some Creamy Garlic Parmesan Pasta</p>
-    </section>
-    <img class="arrow-img" src="./assets/Arrow.png" />
+      <section class="recipes-content">
+        <div class="create-recipe-section">
+          <h2>Want to Share Your Recipe?</h2>
+          <p>Create and share your favorite recipes with our community!</p>
+          <a href="createrecipe.html" class="create-recipe-btn">
+            <i class="fas fa-plus"></i> Create New Recipe
+          </a>
+        </div>
 
-    <section class="recipes-ing-section">
-      <h1>Ingredients 🥗</h1>
-      <ul>
-        <li>8 oz (225g) fettuccine pasta</li>
-        <li>2 tablespoons butter</li>
-        <li>4 cloves garlic, minced</li>
-        <li>1 cup heavy cream</li>
-        <li>1 cup grated Parmesan cheese</li>
-        <li>Salt and pepper to taste</li>
-        <li>Fresh parsley for garnish (optional)</li>
-      </ul>
-    </section>
-    <img class="arrow-img" src="./assets/Arrow.png" />
+        <div class="recipes-grid" id="recipe-list">
+          <!-- Recipe cards will be dynamically added here -->
+        </div>
+      </section>
+    </main>
 
-    <section class="recipes-ins-section">
-      <h1>Instructions 📜</h1>
-      <ol>
-        <li>Cook the fettuccine pasta in a large pot of salted boiling water until al dente. Drain and set aside.</li>
-        <li>In a separate large skillet or saucepan, melt the butter over medium heat.</li>
-        <li>Add the minced garlic to the melted butter and sauté for 1-2 minutes until fragrant, but not browned.</li>
-        <li>Lower the heat to medium-low and pour in the heavy cream, stirring gently.</li>
-        <li>Let the cream simmer for about 2-3 minutes, allowing it to thicken slightly.</li>
-        <li>Gradually add the grated Parmesan cheese to the cream sauce, stirring continuously until the cheese is fully melted and the sauce is smooth.</li>
-        <li>Season the sauce with salt and pepper to taste. Remember that Parmesan can be salty, so taste before adding too much salt.</li>
-        <li>Add the cooked fettuccine to the sauce, tossing well to coat the pasta evenly with the creamy garlic Parmesan sauce.</li>
-        <li>Optional: Garnish with fresh parsley for a pop of color and added freshness.</li>
-        <li>Serve the creamy garlic Parmesan pasta hot, and enjoy your delicious and comforting dish!</li>
-      </ol>
-      <p>PS: You can also add cooked chicken, shrimp, or vegetables to the pasta to make it a complete meal.</p>
-    </section>
-    <img class="arrow-img" src="./assets/Arrow.png" />
+    <footer>
+      <p>&copy; 2024 Crave. All rights reserved.</p>
+    </footer>
 
-    <section class="pasta-img-section">
-      <img class="recipes-pasta-img" src="./assets/pasta.jpg" >
-    </section>
-    
-   
-    
+    <script src="./script.js"></script>
   </body>
 </html>

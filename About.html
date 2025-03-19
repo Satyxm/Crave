@@ -3,50 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/pizza-svgrepo-com.svg" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>About | Crave</title>
+    <title>About - Crave</title>
   </head>
   <body>
     <header>
       <nav>
-        <ul>
-          <h1 class="ignored"><a href="./index.html">Crave</a></h1>
-          <li><a href="./About.html">About</a></li>
-          <li><a href="./recipes.html">Recipes</a></li>
-          <li><a href="./pricing.html" >Pricing</a></li>
-          <li><a href="./account.html" >Account</a></li>
-          <li><a href="./login.html" >Sign In</a></li>
-      </ul>
+        <div class="logo">
+          <a href="./index.html"><i class="fas fa-utensils"></i> Crave</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="./recipes.html"><i class="fas fa-book-open"></i> Recipes</a></li>
+          <li><a href="./pricing.html"><i class="fas fa-tags"></i> Pricing</a></li>
+          <li><a href="./about.html" class="active"><i class="fas fa-info-circle"></i> About</a></li>
+          <li class="auth-links">
+            <a href="./login.html" class="login-link"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            <a href="./signup.html" class="signup-link"><i class="fas fa-user-plus"></i> Sign Up</a>
+            <a href="./account.html" class="account-link hidden"><i class="fas fa-user"></i> Account</a>
+          </li>
+        </ul>
+        <button class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
       </nav>
     </header>
-    <section class="section-about">
-      <h1>ABOUT</h1>
-      <br>
-      <p>
-        🍽️🌮🍕 Welcome to Crave! Satisfy your culinary cravings with our one-stop destination for all things delicious. 🍔🍩🥗
-        <br><br>
-        🌟 Crave is not your average food application—it's a vibrant online hub where food enthusiasts gather to explore a world of tantalizing flavors and mouthwatering recipes. 🌮🍜🍨 
-        <br><br>
-        🎉 With Crave, you'll discover a treasure trove of culinary inspiration tailored to your unique tastes. 🍳🍽️🧁
-        <br><br>
-        👩‍🍳 Whether you're a seasoned home chef or a cooking novice, our collection of carefully curated recipes for your favorite food items will elevate your culinary adventures to new heights. 🍱🍝🍛
-        <br><br>
-        🌌 Join Crave today and discover a universe of flavor that will leave your taste buds forever grateful. 🌍🤤🍽️
-        <br><br>
-        🚀 Get ready to indulge, create, and experience food like never before. Crave—where culinary dreams come true. 🍽️🎆🌟
-        <br><br><br>
-       
-      </p>
-    </section>
+
+    <main>
+      <section class="about-hero">
+        <div class="about-hero-content">
+          <h1>About Crave</h1>
+          <p class="about-subtitle">Your Ultimate Culinary Companion</p>
+        </div>
+      </section>
+
+      <section class="about-content">
+        <div class="about-grid">
+          <div class="about-card">
+            <i class="fas fa-utensils"></i>
+            <h2>Welcome to Crave</h2>
+            <p>Satisfy your culinary cravings with our one-stop destination for all things delicious.</p>
+          </div>
+
+          <div class="about-card">
+            <i class="fas fa-star"></i>
+            <h2>Not Just Another Food App</h2>
+            <p>A vibrant online hub where food enthusiasts gather to explore a world of tantalizing flavors and mouthwatering recipes.</p>
+          </div>
+
+          <div class="about-card">
+            <i class="fas fa-lightbulb"></i>
+            <h2>Discover Inspiration</h2>
+            <p>Find a treasure trove of culinary inspiration tailored to your unique tastes.</p>
+          </div>
+
+          <div class="about-card">
+            <i class="fas fa-users"></i>
+            <h2>For Everyone</h2>
+            <p>Whether you're a seasoned home chef or a cooking novice, our collection of carefully curated recipes will elevate your culinary adventures.</p>
+          </div>
+        </div>
+
+        <div class="about-cta">
+          <h2>Ready to Start Your Culinary Journey?</h2>
+          <p>Join Crave today and discover a universe of flavor that will leave your taste buds forever grateful.</p>
+          <a href="./recipes.html" class="cta-button">Explore Recipes</a>
+        </div>
+      </section>
+    </main>
+
     <footer>
-      <p>Built with 🧡 <a href="https://satyam-s-portfolio.vercel.app/" target="_blank">Satyam Singh</a></p>
+      <p>&copy; 2024 Crave. All rights reserved.</p>
     </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>

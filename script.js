@@ -1,4 +1,3 @@
-
 async function saveRecipe() {
   var title = document.getElementById("title").value;
   var ingredients = document.getElementById("ingredients").value;
@@ -80,70 +79,122 @@ async function deleteRecipe(index) {
   }
 }
 
-
-
 async function displayRecipes() {
   try {
     const response = await fetch(`${baseURL}/api/recipes`);
 
     if (response.ok) {
       const recipes = await response.json();
-      
       localStorage.setItem("recipes", JSON.stringify(recipes));
-
-      var recipesList = document.getElementById("recipes");
-      recipesList.innerHTML = "";
-
-      recipes.forEach(function (recipe, index) {
-        var li = document.createElement("li");
-        li.className = "recipe-item";
-        li.innerHTML =
-          "<strong>" +
-          recipe.title +
-          "</strong><br>" +
-          "Ingredients: " +
-          recipe.ingredients +
-          "<br>" +
-          "Instructions: " +
-          recipe.instructions;
-
-        var deleteButton = document.createElement("button");
-        deleteButton.className = "delete-btn";
-        deleteButton.innerText = "Delete";
-
-        deleteButton.onclick = function () {
-          deleteRecipe(index);
-        };
-        li.appendChild(deleteButton);
-
-        recipesList.appendChild(li);
-      });
+      displayRecipeCards(recipes);
     } else {
       console.error("Failed to get recipes:", response.statusText);
-      alert("Failed to get recipes.");
+      // Display sample recipes when API fails
+      displaySampleRecipes();
     }
   } catch (error) {
     console.error("Error getting recipes:", error);
-    alert("Error getting recipes.");
+    // Display sample recipes when there's an error
+    displaySampleRecipes();
   }
 }
 
+function displayRecipeCards(recipes) {
+  var recipesList = document.getElementById("recipe-list");
+  recipesList.innerHTML = "";
 
+  // Group recipes into pairs
+  for (let i = 0; i < recipes.length; i += 2) {
+    const row = document.createElement("div");
+    row.className = "recipe-row";
 
-    function clearForm() {
-        document.getElementById("title").value = "";
-        document.getElementById("ingredients").value = "";
-        document.getElementById("instructions").value = "";
+    // First recipe in the row
+    if (recipes[i]) {
+      const card1 = createRecipeCard(recipes[i], i);
+      row.appendChild(card1);
     }
 
-    document.addEventListener("DOMContentLoaded", () => {
-        displayRecipes(); 
-      });  
+    // Second recipe in the row
+    if (recipes[i + 1]) {
+      const card2 = createRecipeCard(recipes[i + 1], i + 1);
+      row.appendChild(card2);
+    }
 
+    recipesList.appendChild(row);
+  }
+}
+
+function displaySampleRecipes() {
+  const sampleRecipes = [
+    {
+      title: "Classic Margherita Pizza",
+      description: "A traditional Italian pizza with fresh tomatoes, mozzarella, and basil.",
+      image: "https://images.unsplash.com/photo-1604382355076-af4b0eb60143?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      cookingTime: "25",
+      difficulty: "Medium"
+    },
+    {
+      title: "Chicken Stir Fry",
+      description: "Quick and healthy Asian-inspired stir fry with fresh vegetables.",
+      image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      cookingTime: "20",
+      difficulty: "Easy"
+    },
+    {
+      title: "Chocolate Lava Cake",
+      description: "Rich and decadent chocolate cake with a molten center.",
+      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      cookingTime: "15",
+      difficulty: "Medium"
+    },
+    {
+      title: "Fresh Pasta Carbonara",
+      description: "Classic Italian pasta dish with eggs, cheese, and pancetta.",
+      image: "https://images.unsplash.com/photo-1612874742237-6526221588e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      cookingTime: "30",
+      difficulty: "Hard"
+    }
+  ];
+
+  displayRecipeCards(sampleRecipes);
+}
+
+function createRecipeCard(recipe, index) {
+  const card = document.createElement("div");
+  card.className = "recipe-card";
+
+  card.innerHTML = `
+    <img src="${recipe.image || 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'}" 
+         alt="${recipe.title}" 
+         class="recipe-image">
+    <div class="recipe-content">
+      <h3 class="recipe-title">${recipe.title}</h3>
+      <p class="recipe-description">${recipe.description || 'A delicious recipe waiting to be discovered.'}</p>
+      <div class="recipe-meta">
+        <span><i class="fas fa-clock"></i> ${recipe.cookingTime || '30'} mins</span>
+        <span><i class="fas fa-utensils"></i> ${recipe.difficulty || 'Medium'}</span>
+      </div>
+      <button class="delete-btn" onclick="deleteRecipe(${index})">
+        <i class="fas fa-trash"></i> Delete
+      </button>
+    </div>
+  `;
+
+  return card;
+}
+
+function clearForm() {
+  document.getElementById("title").value = "";
+  document.getElementById("ingredients").value = "";
+  document.getElementById("instructions").value = "";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  displayRecipes(); 
+});  
 
 // registration
 const baseURL = "http://localhost:10000";
-; 
 
 const registrationForm = document.getElementById("registrationForm");
 registrationForm.addEventListener("submit", registerUser);
@@ -181,26 +232,101 @@ loginForm.addEventListener("submit", loginUser);
 // login
 async function loginUser(event) {
   
-    const loginUsername = document.getElementById("loginUsername").value;
-    const loginPassword = document.getElementById("loginPassword").value;
-  
-    try {
-      const response = await fetch(`${baseURL}/api/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username: loginUsername, password: loginPassword }),
-      });
-  
-      if (response.ok) {
-        const data = await response.json();
-        console.log("Login successful:", data);
-      } else {
-        console.error("Login failed:", response.statusText);
-      }
-    } catch (error) {
-      console.error("Error logging in:", error);
+  const loginUsername = document.getElementById("loginUsername").value;
+  const loginPassword = document.getElementById("loginPassword").value;
+
+  try {
+    const response = await fetch(`${baseURL}/api/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username: loginUsername, password: loginPassword }),
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      console.log("Login successful:", data);
+    } else {
+      console.error("Login failed:", response.statusText);
     }
+  } catch (error) {
+    console.error("Error logging in:", error);
   }
-  
+}
+
+// Theme Toggle Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.querySelector('.theme-toggle');
+    const icon = themeToggle.querySelector('i');
+
+    // Check for saved theme preference or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Set initial theme
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+    } else if (prefersDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        updateThemeIcon('dark');
+    }
+
+    // Theme toggle click handler
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
+});
+
+// Mobile Menu Functionality
+const menuToggle = document.createElement('div');
+menuToggle.className = 'menu-toggle';
+menuToggle.innerHTML = '<span></span><span></span><span></span>';
+document.querySelector('header nav').appendChild(menuToggle);
+
+const navMenu = document.querySelector('header nav ul');
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+    }
+});
+
+// Handle auth state
+function updateAuthLinks() {
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  const loginLinks = document.querySelectorAll('.login-link');
+  const signupLinks = document.querySelectorAll('.signup-link');
+  const accountLinks = document.querySelectorAll('.account-link');
+
+  loginLinks.forEach(link => {
+    link.classList.toggle('hidden', isLoggedIn);
+  });
+
+  signupLinks.forEach(link => {
+    link.classList.toggle('hidden', isLoggedIn);
+  });
+
+  accountLinks.forEach(link => {
+    link.classList.toggle('hidden', !isLoggedIn);
+  });
+}
+
+// Call updateAuthLinks when the page loads
+document.addEventListener('DOMContentLoaded', updateAuthLinks);  

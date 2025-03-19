@@ -3,35 +3,124 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/pizza-svgrepo-com.svg" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" >
-    <title>Pricing | Crave</title>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Pricing - Crave</title>
   </head>
   <body>
-      <header>
-        <nav>
-            
-            <ul>
-                <h1 class="ignored"><a href="./index.html">Crave</a></h1>
-                <li><a href="./About.html">About</a></li>
-                <li><a href="./recipes.html">Recipes</a></li>
-                <li><a href="./pricing.html" >Pricing</a></li>
-                <li><a href="./account.html" >Account</a></li>
-                <li><a href="./login.html" >Sign In</a></li>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="./index.html"><i class="fas fa-utensils"></i> Crave</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="./recipes.html"><i class="fas fa-book-open"></i> Recipes</a></li>
+          <li><a href="./pricing.html" class="active"><i class="fas fa-tags"></i> Pricing</a></li>
+          <li><a href="./about.html"><i class="fas fa-info-circle"></i> About</a></li>
+          <li class="auth-links">
+            <a href="./login.html" class="login-link"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            <a href="./signup.html" class="signup-link"><i class="fas fa-user-plus"></i> Sign Up</a>
+            <a href="./account.html" class="account-link hidden"><i class="fas fa-user"></i> Account</a>
+          </li>
+        </ul>
+        <button class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="pricing-hero">
+        <div class="pricing-hero-content">
+          <h1>Choose Your Plan</h1>
+          <p class="pricing-subtitle">Select the perfect plan for your culinary journey</p>
+        </div>
+      </section>
+
+      <section class="pricing-content">
+        <div class="pricing-grid">
+          <!-- Basic Plan -->
+          <div class="pricing-card">
+            <h2>Basic</h2>
+            <div class="price">$9.99<span>/month</span></div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Access to basic recipes</li>
+              <li><i class="fas fa-check"></i> Basic search functionality</li>
+              <li><i class="fas fa-check"></i> Community support</li>
+              <li><i class="fas fa-check"></i> Ad-supported experience</li>
             </ul>
-        </nav>
-      </header>
-      <section class="pricing-section">
-        <h1>$0/Month</h1>
-        <p>Completely Free to Use!</p>
-        <img class="clap-gif" src="./assets/clap-scott-gaunson.gif" >
-    </section>
+            <button class="btn btn-primary">
+              <i class="fas fa-shopping-cart"></i> Get Started
+            </button>
+          </div>
+
+          <!-- Pro Plan -->
+          <div class="pricing-card popular">
+            <div class="popular-badge">Most Popular</div>
+            <h2>Pro</h2>
+            <div class="price">$19.99<span>/month</span></div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> All basic features</li>
+              <li><i class="fas fa-check"></i> Ad-free experience</li>
+              <li><i class="fas fa-check"></i> Advanced search filters</li>
+              <li><i class="fas fa-check"></i> Save favorite recipes</li>
+              <li><i class="fas fa-check"></i> Create custom collections</li>
+            </ul>
+            <button class="btn btn-primary">
+              <i class="fas fa-shopping-cart"></i> Get Started
+            </button>
+          </div>
+
+          <!-- Premium Plan -->
+          <div class="pricing-card">
+            <h2>Premium</h2>
+            <div class="price">$29.99<span>/month</span></div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> All pro features</li>
+              <li><i class="fas fa-check"></i> Exclusive recipes</li>
+              <li><i class="fas fa-check"></i> Video tutorials</li>
+              <li><i class="fas fa-check"></i> Priority support</li>
+              <li><i class="fas fa-check"></i> Early access to new features</li>
+            </ul>
+            <button class="btn btn-primary">
+              <i class="fas fa-shopping-cart"></i> Get Started
+            </button>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="pricing-faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h3>Can I change my plan later?</h3>
+              <p>Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Is there a free trial?</h3>
+              <p>Yes, all plans come with a 14-day free trial. No credit card required to start.</p>
+            </div>
+            <div class="faq-item">
+              <h3>What payment methods do you accept?</h3>
+              <p>We accept all major credit cards, PayPal, and Apple Pay.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Crave. All rights reserved.</p>
+    </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>

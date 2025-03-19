@@ -3,60 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/pizza-svgrepo-com.svg" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500&family=Poppins:wght@400;500;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Account | Crave</title>
+    <title>Account - Crave</title>
   </head>
   <body>
     <header>
       <nav>
-        <ul>
-          <h1 class="ignored"><a href="./index.html">Crave</a></h1>
-          <li><a href="./About.html">About</a></li>
-          <li><a href="./recipes.html">Recipes</a></li>
-          <li><a href="./pricing.html">Pricing</a></li>
-          <li><a href="./account.html" >Account</a></li>
-          <li><a href="./login.html" >Sign In</a></li>
+        <div class="logo">
+          <a href="./index.html"><i class="fas fa-utensils"></i> Crave</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="./recipes.html"><i class="fas fa-book-open"></i> Recipes</a></li>
+          <li><a href="./pricing.html"><i class="fas fa-tags"></i> Pricing</a></li>
+          <li><a href="./about.html"><i class="fas fa-info-circle"></i> About</a></li>
+          <li><a href="./account.html" class="active"><i class="fas fa-user"></i> Account</a></li>
         </ul>
+        <button class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
       </nav>
     </header>
 
-    <section class="acc-details-section">
-      <h3>User Name: Avg_Weeb</h3>
-      <h3>Fav Food: Ramen</h3>
-      <h3>Insipired by: Naruto</h3>
-      <img class="pfp" src="./assets/Erehh.png">
+    <section class="account-hero">
+      <div class="account-hero-content">
+        <h1>My Account</h1>
+        <p class="account-subtitle">Manage your profile and preferences</p>
+      </div>
     </section>
 
-    <section class="container-sec">
-      
-      <section class="acc-sec-1">
-        <h3>Your Recipes</h3>
-      </section>
-     
-      <section class="acc-sec-2">
-        <h3>Liked Recipes</h3>
-      </section>
+    <section class="account-content">
+      <div class="account-grid">
+        <aside class="account-sidebar">
+          <div class="account-profile">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="Profile" class="profile-image">
+            <h2 class="profile-name">John Doe</h2>
+            <p class="profile-email">john.doe@example.com</p>
+          </div>
+          <ul class="account-menu">
+            <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+            <li><a href="#"><i class="fas fa-history"></i> History</a></li>
+            <li><a href="#"><i class="fas fa-bell"></i> Notifications</a></li>
+            <li><a href="#"><i class="fas fa-lock"></i> Security</a></li>
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
+          </ul>
+        </aside>
 
-      <section class="acc-sec-3">
-        <h3>Recipes Shared</h3>
-      </section>
+        <main class="account-main">
+          <h2 class="section-title">Profile Settings</h2>
+          <form class="account-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" value="John" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" value="Doe" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" value="john.doe@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="bio">Bio</label>
+              <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-secondary">
+                <i class="fas fa-times"></i> Cancel
+              </button>
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-save"></i> Save Changes
+              </button>
+            </div>
+          </form>
+        </main>
+      </div>
     </section>
 
-    <footer class="acc-footer">
-       <p>Warning: This page is currently under construction and the interface which you see now is the prototype of the desired outcome!</p>
+    <footer>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Crave. All rights reserved.</p>
+      </div>
     </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>

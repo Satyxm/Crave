@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Recipe - Crave</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="./index.html"><i class="fas fa-utensils"></i> Crave</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="./recipes.html"><i class="fas fa-book"></i> Recipes</a></li>
+                <li><a href="./pricing.html"><i class="fas fa-tag"></i> Pricing</a></li>
+                <li><a href="./About.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li class="auth-links">
+                    <a href="./login.html" class="login-link"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+                    <a href="./signup.html" class="signup-link"><i class="fas fa-user-plus"></i> Sign Up</a>
+                    <a href="./account.html" class="account-link hidden"><i class="fas fa-user"></i> Account</a>
+                </li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="create-recipe-hero">
+            <div class="create-recipe-hero-content">
+                <h1>Create Your Recipe</h1>
+                <p>Share your culinary masterpiece with the Crave community</p>
+            </div>
+        </section>
+
+        <section class="create-recipe-section">
+            <h2>Recipe Details</h2>
+            <form class="recipe-form" id="recipeForm">
+                <div class="form-group">
+                    <label for="title">Recipe Title</label>
+                    <input type="text" id="title" name="title" required placeholder="Enter a catchy title for your recipe">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" required placeholder="Describe your recipe in a few sentences"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cookingTime">Cooking Time (minutes)</label>
+                        <input type="number" id="cookingTime" name="cookingTime" min="1" required placeholder="e.g., 30">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="difficulty">Difficulty Level</label>
+                        <select id="difficulty" name="difficulty" required>
+                            <option value="">Select difficulty</option>
+                            <option value="Easy">Easy</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Hard">Hard</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ingredients">Ingredients</label>
+                    <textarea id="ingredients" name="ingredients" required placeholder="Enter ingredients, one per line"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="instructions">Instructions</label>
+                    <textarea id="instructions" name="instructions" required placeholder="Enter step-by-step instructions"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Image URL</label>
+                    <input type="url" id="image" name="image" placeholder="Enter the URL of your recipe image">
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='recipes.html'">
+                        <i class="fas fa-times"></i> Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Create Recipe
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Crave. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
