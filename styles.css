@@ -21,6 +21,51 @@
     --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    color: black;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  .nav-links li a {
+    color: grey;
+    text-decoration: none;
+  }
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: orange;
+    font-size: 20.5px;
+    cursor: pointer;
+    margin-right: 45px; /* Shift hamburger icon left */
+  }
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #222;
+      padding: 10px 0;
+      text-align: center;
+    }
+    .nav-links.active {
+      display: flex;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -38,14 +83,14 @@ body {
 /* Theme Toggle Button */
 .theme-toggle {
     position: fixed;
-    top: 20px;
+    top: 14px;
     right: 20px;
     z-index: 1000;
     background: var(--primary-color);
     border: none;
     border-radius: 50%;
     width: 40px;
-    height: 40px;
+    height: auto;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -415,6 +460,8 @@ main {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+
+
 /* Form Improvements */
 .form-group input,
 .form-group textarea {
@@ -515,9 +562,11 @@ button[type="submit"]:hover {
     .recipes-ing-section,
     .recipes-ins-section,
     .create-recipes-section {
-        margin: 2rem 1rem;
-        width: auto;
-        padding: 2rem;
+        margin: 1.5rem auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 1.5rem;
+        box-sizing: border-box;
     }
 
     .recipes-pasta-img {
@@ -535,6 +584,7 @@ button[type="submit"]:hover {
         padding: 12px;
     }
 }
+
 
 /* Dark Mode Specific Styles */
 [data-theme="dark"] .pricing-section,

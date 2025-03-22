@@ -14,15 +14,20 @@
     <link rel="stylesheet" href="./styles.css" />
     <title>Recipes - Crave</title>
   </head>
+
+  
   <body>
     <header>
       <nav>
         <div class="logo">
           <a href="./index.html"><i class="fas fa-utensils"></i> Crave</a>
         </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
         <ul class="nav-links">
-          <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="./recipes.html" class="active"><i class="fas fa-book-open"></i> Recipes</a></li>
+          <li><a href="./index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="./recipes.html"><i class="fas fa-book-open"></i> Recipes</a></li>
           <li><a href="./pricing.html"><i class="fas fa-tags"></i> Pricing</a></li>
           <li><a href="./about.html"><i class="fas fa-info-circle"></i> About</a></li>
           <li class="auth-links">
@@ -65,5 +70,12 @@
     </footer>
 
     <script src="./script.js"></script>
+    <script>
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.body.insertAdjacentHTML('afterbegin', data);
+        });
+    </script>
   </body>
 </html>

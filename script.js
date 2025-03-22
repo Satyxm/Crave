@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  
+  hamburger.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+    this.innerHTML = navLinks.classList.contains("active")
+      ? '<i class="fas fa-times"></i>'
+      : '<i class="fas fa-bars"></i>';
+  });
+});
+
+
 async function saveRecipe() {
   var title = document.getElementById("title").value;
   var ingredients = document.getElementById("ingredients").value;

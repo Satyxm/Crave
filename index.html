@@ -20,6 +20,9 @@
         <div class="logo">
           <a href="./index.html"><i class="fas fa-utensils"></i> Crave</a>
         </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
         <ul class="nav-links">
           <li><a href="./index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
           <li><a href="./recipes.html"><i class="fas fa-book-open"></i> Recipes</a></li>
@@ -36,6 +39,55 @@
         </button>
       </nav>
     </header>
+    
+    <style>
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        color: black;
+      }
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+      }
+      .nav-links li a {
+        color: white;
+        text-decoration: none;
+      }
+      .hamburger {
+        display: none;
+        background: none;
+        border: none;
+        color: black;
+        font-size: 24px;
+        cursor: pointer;
+        margin-right: 45px; /* Shift hamburger icon left */
+      }
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background: #222;
+          padding: 10px 0;
+          text-align: center;
+        }
+        .nav-links.active {
+          display: flex;
+        }
+        .hamburger {
+          display: block;
+        }
+      }
+    </style>
+    
+    
 
     <main>
       <section class="hero-section">
@@ -56,5 +108,18 @@
     </footer>
 
     <script src="./script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        
+        hamburger.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+          this.innerHTML = navLinks.classList.contains("active")
+            ? '<i class="fas fa-times"></i>'
+            : '<i class="fas fa-bars"></i>';
+        });
+      });
+    </script>
   </body>
 </html>
